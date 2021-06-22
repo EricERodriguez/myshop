@@ -8,10 +8,9 @@ import styles from "./styles";
 
 
 
-import { MaterialIcons, AntDesign, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import Carts from "./carts";
-import { color } from 'jimp';
 
 
 
