@@ -1,21 +1,215 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from 'react';
+import { View, Text, Image, TextInput, ImageBackground } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import { Button } from 'react-native-elements';
+import styles from "./styles";
 
-export default function App() {
+import { MaterialIcons, AntDesign, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
+
+import Carts from "./carts";
+
+
+
+
+function HomeScreen({ navigation }) {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={{ flex: 1, width: '100%', backgroundColor: '#191919'  }}>
+      <Image
+      style={{height: '75%', width: '100%'}}
+      source={require('./assets/home.png')}
+      />
+      <Text style={{ fontSize: 30, color: '#FBEEE6',justifyContent: 'center', textAlign: 'center' }}>Entra al Shop</Text>
+      <Button
+        onPress={() => navigation.navigate('Loguear')}
+        title="Login" color='#602D0F' type="outline"
+      />
+      <Button
+        onPress={() => navigation.navigate('Register')}
+        title="Register"  type='outline' raised
+      />
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+//llamo style para default, puedo cambiar los hijos adentro
+function Input(props) {
+  return (
+    <View style={styles.textInputContainer}>
+      <Text style={styles.textInputLabel}>{props.label}</Text>
+      <TextInput style={styles.textInput} {...props} />
+    </View>
+  );
+}
+
+
+
+function Login({ navigation }) {
+  return (
+    <View style={{ flex: 1, backgroundColor: '#191919' , width: '100%'}}>
+      <Text style={[styles.textWithShadow, {flex: 1, fontSize: 30, color: 'black',justifyContent: 'center', textAlign: 'center' , marginTop: -35, backgroundColor: '#FBEEE6', paddingTop: 50, marginBottom: -100}]}><MaterialCommunityIcons name="dog" size={25} color="#000" /> PetShop</Text>
+      <ImageBackground source={require('./assets/login.png')} style={{height: '75%', width: '100%'}} />
+        <Text style={[styles.textWithShadow, {flex: 1, fontSize: 30, color: '#ffffff', marginTop: -290}]}></Text>
+        <View>
+          <Input  style={{ flex: 1, fontSize: 30, color: '#FBEEE6'}}/>
+          <Icon
+            name='envelope-o'
+            size={24}
+            color='#FBEEE6'>
+          <Text style={styles.textWithShadow}>    Ingrese e-mail:</Text></Icon>
+          <Input  autoCompleteType='email' style={{
+                  flex: 1,
+                  color: 'black',
+                  backgroundColor: '#FBEEE6',
+                  borderColor: 'gray',
+                  borderWidth: 4,
+                  borderRadius: 50,
+                  padding: 15,
+                  fontSize: 10
+          }}/>
+          <Icon
+            name='unlock'
+            size={24}
+            color='#FBEEE6'>
+          <Text style={styles.textWithShadow}>    Ingrese Password:</Text></Icon>
+          <Input secureTextEntry style={{
+                  flex: 1,
+                  color: 'black',
+                  backgroundColor: '#FBEEE6',
+                  borderColor: 'gray',
+                  borderWidth: 4,
+                  borderRadius: 50,
+                  padding: 15,
+                  fontSize: 10
+          }}/>
+          <Text margin='12'></Text>
+          <Button onPress={() => navigation.navigate('Comprar')} title=" Entrar" type="outline" color='#FBEEE6' style={styles.textWithShadow}  icon={
+            <Icon
+              name="shopping-cart"
+              size={20}
+              color="#FBEEE6"
+            />}
+          /></View>
+    </View>
+  );
+}
+
+
+//onPress={() => navigation.goBack()}
+
+function Register({ navigation }) {
+  return (
+    <View style={{ flex: 1, width: '100%', backgroundColor: '#191919'   }}>
+      <ImageBackground source={require('./assets/register.png')} style={{height: '75%', width: '100%'}}/>
+        <Text style={[styles.textWithShadow, {flex: 1, fontSize: 30, color: '#FBEEE6', marginTop: -270, paddingBottom: 20}]}><MaterialCommunityIcons name="dog" size={25} color="white" /> Registrar</Text>
+        <View>
+        <Input  style={{ flex: 1, fontSize: 30, color: '#FBEEE6'}}/>
+          <Icon
+            name='user'
+            size={24}
+            color='#FBEEE6'>
+          <Text style={styles.textWithShadow}>    Ingrese Nombre:</Text></Icon>
+          <Input  type='name' style={{
+                  flex: 1,
+                  color: 'black',
+                  backgroundColor: '#FBEEE6',
+                  borderColor: 'gray',
+                  borderWidth: 4,
+                  borderRadius: 50,
+                  padding: 15,
+                  fontSize: 10
+          }}/>
+          <Input  style={{ flex: 1, fontSize: 30, color: '#FBEEE6'}}/>
+          <Icon
+            name='envelope-o'
+            size={24}
+            color='#FBEEE6'>
+          <Text style={styles.textWithShadow}>    Ingrese e-mail:</Text></Icon>
+          <Input  autoCompleteType='email' style={{
+                  flex: 1,
+                  color: 'black',
+                  backgroundColor: '#FBEEE6',
+                  borderColor: 'gray',
+                  borderWidth: 4,
+                  borderRadius: 50,
+                  padding: 15,
+                  fontSize: 10
+          }}/>
+          <Icon
+            name='unlock'
+            size={24}
+            color='#FBEEE6'>
+          <Text style={styles.textWithShadow}>    Ingrese Password:</Text></Icon>
+          <Input secureTextEntry style={{
+                  flex: 1,
+                  color: 'black',
+                  backgroundColor: '#FBEEE6',
+                  borderColor: 'gray',
+                  borderWidth: 4,
+                  borderRadius: 40,
+                  padding: 15,
+                  fontSize: 10
+          }}/>
+          </View>
+        <Button onPress={() => navigation.navigate('Loguear')} title=" Registrar" type="outline" color='#FBEEE6' style={styles.textWithShadow}  icon={
+            <Icon
+              name="check"
+              size={20}
+              color="#FBEEE6"
+            />}/>
+    </View>
+  );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+function Cart() {
+  return (
+    <Carts></Carts>
+  );
+}
+
+function DetailsScreen() {
+  return (
+    <View>
+      <Text>Details</Text>
+    </View>
+  );
+}
+
+const MainStack = createStackNavigator();
+const RootStack = createStackNavigator();
+
+function MainStackScreen() {
+  return (
+    <MainStack.Navigator>
+      <MainStack.Screen name="PetShop"  component={HomeScreen}></MainStack.Screen>
+      <MainStack.Screen name="Details" component={DetailsScreen} />
+    </MainStack.Navigator>
+  );
+}
+
+function App() {
+  return (
+    <NavigationContainer>
+      <RootStack.Navigator mode="modal" headerMode="none">
+        <RootStack.Screen name="Main" component={MainStackScreen} />
+        <RootStack.Screen name="Loguear" component={Login} />
+        <RootStack.Screen name="Register" component={Register} />
+        <RootStack.Screen name="Comprar" component={Cart} />
+      </RootStack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default App;
