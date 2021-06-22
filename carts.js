@@ -149,20 +149,20 @@ export default class Cart extends React.Component {
 										<Text numberOfLines={1} style={{color: '#8f8f8f'}}>{item.info ? 'Info: ' + item.info : ''}</Text>
 
                                         {/* Precio del producto */}
-                    <Text numberOfLines={1} style={{color: 'white', marginBottom: 10, fontSize: 30}}>${item.qty * item.salePrice}</Text>
+                    <Text numberOfLines={1} style={{color: 'deepskyblue', marginBottom: 10, fontSize: 30}}>${item.qty * item.salePrice}</Text>
 										<View style={{flexDirection: 'row'}}>
-											<TouchableOpacity onPress={() => this.quantityHandler('less', i)} style={{ borderWidth: 1, borderColor: '#cccccc' }}>
+											<TouchableOpacity onPress={() => this.quantityHandler('less', i)} style={{ borderRadius: 50, borderWidth: 1, borderColor: 'deepskyblue', paddingHorizontal: 10}}>
 
                                                 {/* Restar item */}
-												<MaterialIcons name="remove" size={25} color="#cccccc" />
+												<MaterialIcons name="remove" size={25} color="deepskyblue" />
 											</TouchableOpacity>
 
                                             {/* Numero de items, por defecto puse 1 asi si seleciona el check cuenta el primer producto */}
-											<Text style={{ borderTopWidth: 1, borderBottomWidth: 1, borderColor: '#cccccc', paddingHorizontal: 7, paddingTop: 3, color: '#bbbbbb', fontSize: 20 }}>{item.qty}</Text>
-											<TouchableOpacity onPress={() => this.quantityHandler('more', i)} style={{ borderWidth: 1, borderColor: '#cccccc' }}>
+											<Text style={{ borderTopWidth: 1, borderBottomWidth: 1, borderRadius: 50, borderWidth: 1, borderColor: 'deepskyblue', paddingHorizontal: 10, paddingTop: 3, color: 'deepskyblue', fontSize: 20, fontWeight: 'bold' }}>{item.qty}</Text>
+											<TouchableOpacity onPress={() => this.quantityHandler('more', i)} style={{ borderRadius: 50, borderWidth: 1, borderColor: 'deepskyblue', paddingHorizontal: 10}}>
 
                                                 {/* Agregar item */}
-												<MaterialIcons name="add" size={25} color="#cccccc" />
+												<MaterialIcons name="add" size={25} color="deepskyblue" />
 											</TouchableOpacity>
 										</View>
 									</View>
@@ -215,7 +215,7 @@ export default class Cart extends React.Component {
 								<Text>Seleccionar Todo</Text>
 								<View style={{flexDirection: 'row', paddingRight: 20, alignItems: 'center'}}>
 									<Text style={{color: '#8f8f8f'}}>SubTotal: </Text>
-									<Text>${this.subtotalPrice().toFixed(2)}</Text>
+									<Text style={{color: 'black', fontSize: 25}}>${this.subtotalPrice().toFixed(2)}</Text>
 								</View>
 							</View>
 						</View>

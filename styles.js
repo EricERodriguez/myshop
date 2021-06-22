@@ -31,6 +31,6 @@ export default StyleSheet.create({
     textShadowRadius: 10,
     color: 'white',
     fontSize: 20,
-  }
+  },
 });
 

@@ -6,28 +6,45 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import { Button } from 'react-native-elements';
 import styles from "./styles";
 
+
+
 import { MaterialIcons, AntDesign, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 
 import Carts from "./carts";
+import { color } from 'jimp';
+
+
 
 
 
 
 function HomeScreen({ navigation }) {
+
   return (
-    <View style={{ flex: 1, width: '100%', backgroundColor: '#191919'  }}>
+    <View style={{ flex: 1, backgroundColor: '#191919'  }}>
       <Image
       style={{height: '75%', width: '100%'}}
       source={require('./assets/home.png')}
       />
-      <Text style={{ fontSize: 30, color: '#FBEEE6',justifyContent: 'center', textAlign: 'center' }}>Entra al Shop</Text>
+      <Image
+      style={{flex: 1,height: '100%', width: '100%'}}
+      source={require('./assets/EntrarAlShop.png')}
+      />
       <Button
         onPress={() => navigation.navigate('Loguear')}
         title="Login" color='#602D0F' type="outline"
+        buttonStyle={{
+          margin: 5,
+          borderRadius: 30,
+        }}
       />
       <Button
         onPress={() => navigation.navigate('Register')}
-        title="Register"  type='outline' raised
+        title="Register"  type='Clear'  color='white'
+        buttonStyle={{
+          margin: -5,
+          borderRadius: 30,
+        }}
       />
     </View>
   );
@@ -48,9 +65,10 @@ function Input(props) {
 function Login({ navigation }) {
   return (
     <View style={{ flex: 1, backgroundColor: '#191919' , width: '100%'}}>
-      <Text style={[styles.textWithShadow, {flex: 1, fontSize: 30, color: 'black',justifyContent: 'center', textAlign: 'center' , marginTop: -35, backgroundColor: '#FBEEE6', paddingTop: 50, marginBottom: -100}]}><MaterialCommunityIcons name="dog" size={25} color="#000" /> PetShop</Text>
+      <Text style={[styles.textWithShadow, {flex: 1, fontSize: 30, color: 'black',justifyContent: 'center', textAlign: 'center' , marginTop: -35, backgroundColor: '#FBEEE6', paddingTop: 50, marginBottom: -100}]}>
+        <MaterialCommunityIcons name="dog" size={25} color="#000" /> PetShop</Text>
       <ImageBackground source={require('./assets/login.png')} style={{height: '75%', width: '100%'}} />
-        <Text style={[styles.textWithShadow, {flex: 1, fontSize: 30, color: '#ffffff', marginTop: -290}]}></Text>
+        <Text style={[styles.textWithShadow, {flex: 1, fontSize: 30, color: '#ffffff', marginTop: -370}]}></Text>
         <View>
           <Input  style={{ flex: 1, fontSize: 30, color: '#FBEEE6'}}/>
           <Icon
@@ -62,9 +80,10 @@ function Login({ navigation }) {
                   flex: 1,
                   color: 'black',
                   backgroundColor: '#FBEEE6',
-                  borderColor: 'gray',
-                  borderWidth: 4,
-                  borderRadius: 50,
+                  borderColor: 'deepskyblue',
+                  borderWidth: 3,
+                  margin: 5,
+                  borderRadius: 10,
                   padding: 15,
                   fontSize: 10
           }}/>
@@ -77,20 +96,27 @@ function Login({ navigation }) {
                   flex: 1,
                   color: 'black',
                   backgroundColor: '#FBEEE6',
-                  borderColor: 'gray',
-                  borderWidth: 4,
-                  borderRadius: 50,
+                  borderColor: 'deepskyblue',
+                  borderWidth: 3,
+                  margin: 5,
+                  borderRadius: 10,
                   padding: 15,
                   fontSize: 10
           }}/>
           <Text margin='12'></Text>
-          <Button onPress={() => navigation.navigate('Comprar')} title=" Entrar" type="outline" color='#FBEEE6' style={styles.textWithShadow}  icon={
+          <Button onPress={() => navigation.navigate('Comprar')} title=" Entrar" type="outline" color='#FBEEE6' style={styles.textWithShadow}
+          buttonStyle={{
+            margin: 5,
+            borderRadius: 10,
+          }}  icon={
             <Icon
               name="shopping-cart"
               size={20}
               color="#FBEEE6"
             />}
-          /></View>
+          />
+          <Text  onPress={() => navigation.navigate('Register')} style={{color: 'gray', fontSize: 15, justifyContent: 'center', textAlign: 'center' , marginBottom: 30, marginTop: -5}}>Crear cuenta</Text>
+          </View>
     </View>
   );
 }
@@ -102,7 +128,7 @@ function Register({ navigation }) {
   return (
     <View style={{ flex: 1, width: '100%', backgroundColor: '#191919'   }}>
       <ImageBackground source={require('./assets/register.png')} style={{height: '75%', width: '100%'}}/>
-        <Text style={[styles.textWithShadow, {flex: 1, fontSize: 30, color: '#FBEEE6', marginTop: -270, paddingBottom: 20}]}><MaterialCommunityIcons name="dog" size={25} color="white" /> Registrar</Text>
+        <Text style={[styles.textWithShadow, {flex: 1, fontSize: 15, color: '#FBEEE6', marginTop: -290, paddingBottom: 20}]}><MaterialCommunityIcons name="dog" size={25} color="white" /> Registrar</Text>
         <View>
         <Input  style={{ flex: 1, fontSize: 30, color: '#FBEEE6'}}/>
           <Icon
@@ -113,10 +139,11 @@ function Register({ navigation }) {
           <Input  type='name' style={{
                   flex: 1,
                   color: 'black',
-                  backgroundColor: '#FBEEE6',
-                  borderColor: 'gray',
-                  borderWidth: 4,
-                  borderRadius: 50,
+                  backgroundColor: 'white',
+                  borderColor: 'deepskyblue',
+                  borderWidth: 3,
+                  margin: 5,
+                  borderRadius: 10,
                   padding: 15,
                   fontSize: 10
           }}/>
@@ -129,10 +156,11 @@ function Register({ navigation }) {
           <Input  autoCompleteType='email' style={{
                   flex: 1,
                   color: 'black',
-                  backgroundColor: '#FBEEE6',
-                  borderColor: 'gray',
-                  borderWidth: 4,
-                  borderRadius: 50,
+                  backgroundColor: 'white',
+                  borderColor: 'deepskyblue',
+                  borderWidth: 3,
+                  margin: 5,
+                  borderRadius: 10,
                   padding: 15,
                   fontSize: 10
           }}/>
@@ -144,15 +172,21 @@ function Register({ navigation }) {
           <Input secureTextEntry style={{
                   flex: 1,
                   color: 'black',
-                  backgroundColor: '#FBEEE6',
-                  borderColor: 'gray',
-                  borderWidth: 4,
-                  borderRadius: 40,
+                  backgroundColor: 'white',
+                  borderColor: 'deepskyblue',
+                  borderWidth: 3,
+                  margin: 5,
+                  borderRadius: 10,
+                  margin: 5,
                   padding: 15,
                   fontSize: 10
           }}/>
           </View>
-        <Button onPress={() => navigation.navigate('Loguear')} title=" Registrar" type="outline" color='#FBEEE6' style={styles.textWithShadow}  icon={
+        <Button onPress={() => navigation.navigate('Loguear')} title=" Registrar" type="outline" color='#FBEEE6' style={styles.textWithShadow}
+        buttonStyle={{
+          margin: 5,
+          borderRadius: 30,
+        }}  icon={
             <Icon
               name="check"
               size={20}
