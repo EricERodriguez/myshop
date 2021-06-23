@@ -19,6 +19,10 @@ npm install react-native-vector-icons --save </code></pre>
 
 Ejecutar el programa en un entorno local
 
+## Probar la app, puede probarla con el siguiente qr scanneandolo con la aplicacion expo de Android store o iOS
+
+<img align="center" src="https://github.com/EricERodriguez//myshop/blob/main/El%20diseño/qr.png?raw=true" width="50%" height=""  style="max-width-50%;">
+
 ### En la carpeta "El diseño" se encuentra la imagen del mockup
 
 <h1>Diseño Imagen elegida, fácil de editar :</h1>
