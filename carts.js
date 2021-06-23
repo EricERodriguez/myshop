@@ -191,7 +191,7 @@ export default class Cart extends React.Component {
 								</View>
 							</View>
 							<View style={{flexDirection: 'row', flexGrow: 1, flexShrink: 1, justifyContent: 'space-between', alignItems: 'center'}}>
-								<Text>Codigo descuento</Text>
+								<Text>Código descuento</Text>
 								<View style={{paddingRight: 20}}>
 									<TextInput
 										style={{paddingHorizontal: 10, backgroundColor: '#f0f0f0', height: 25, borderRadius: 4, borderColor: 'gray',
