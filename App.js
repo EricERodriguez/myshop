@@ -25,10 +25,11 @@ function HomeScreen({ navigation }) {
       style={{height: '75%', width: '100%'}}
       source={require('./assets/home.png')}
       />
-      <Image
-      style={{flex: 1,height: '100%', width: '100%'}}
-      source={require('./assets/EntrarAlShop.png')}
-      />
+      <Text style={{flex: 1,color: 'deepskyblue', fontSize: 40, justifyContent: 'center', textAlign: 'center',  
+            textShadowColor: 'rgba(255, 255,  255, 0.50)',
+            textShadowOffset: {width: 1, height: 1},
+            textShadowRadius: 14}}>Entrar al Shop</Text>
+      
       <Button
         onPress={() => navigation.navigate('Loguear')}
         title="Login" color='#602D0F' type="outline"
@@ -64,7 +65,7 @@ function Input(props) {
 function Login({ navigation }) {
   return (
     <View style={{ flex: 1, backgroundColor: '#191919' , width: '100%'}}>
-      <Text style={[styles.textWithShadow, {flex: 1, fontSize: 30, color: 'black',justifyContent: 'center', textAlign: 'center' , marginTop: -35, backgroundColor: '#FBEEE6', paddingTop: 50, marginBottom: -100}]}>
+      <Text style={[styles.textWithShadow, {flex: 1, fontSize: 30, color: 'black',justifyContent: 'center', textAlign: 'center' , marginTop: -45, backgroundColor: '#FBEEE6', paddingTop: 60, marginBottom: -90}]}>
         <MaterialCommunityIcons name="dog" size={25} color="#000" /> PetShop</Text>
       <ImageBackground source={require('./assets/login.png')} style={{height: '75%', width: '100%'}} />
         <Text style={[styles.textWithShadow, {flex: 1, fontSize: 30, color: '#ffffff', marginTop: -370}]}></Text>
@@ -74,33 +75,37 @@ function Login({ navigation }) {
             name='envelope-o'
             size={24}
             color='#FBEEE6'>
-          <Text style={styles.textWithShadow}>    Ingrese e-mail:</Text></Icon>
+          <Text style={[styles.textWithShadow,{textShadowColor: 'rgba(0, 191,  255, 1)',
+            textShadowOffset: {width: 1, height: 1},
+            textShadowRadius: 14}]}>    Ingrese e-mail:</Text></Icon>
           <Input  autoCompleteType='email' style={{
                   flex: 1,
                   color: 'black',
-                  backgroundColor: '#FBEEE6',
-                  borderColor: 'deepskyblue',
-                  borderWidth: 3,
+                  backgroundColor: 'white',
+                  borderColor: 'rgba(0, 191,  255, 0.25)',
+                  borderWidth: 7,
                   margin: 5,
                   borderRadius: 10,
                   padding: 15,
-                  fontSize: 10
+                  fontSize: 14
           }}/>
           <Icon
             name='unlock'
             size={24}
             color='#FBEEE6'>
-          <Text style={styles.textWithShadow}>    Ingrese Password:</Text></Icon>
+          <Text style={[styles.textWithShadow,{textShadowColor: 'rgba(0, 191,  255, 1)',
+            textShadowOffset: {width: 1, height: 1},
+            textShadowRadius: 14}]}>    Ingrese Password:</Text></Icon>
           <Input secureTextEntry style={{
                   flex: 1,
                   color: 'black',
-                  backgroundColor: '#FBEEE6',
-                  borderColor: 'deepskyblue',
-                  borderWidth: 3,
+                  backgroundColor: 'white',
+                  borderColor: 'rgba(0, 191,  255, 0.25)',
+                  borderWidth: 7,
                   margin: 5,
                   borderRadius: 10,
                   padding: 15,
-                  fontSize: 10
+                  fontSize: 14
           }}/>
           <Text margin='12'></Text>
           <Button onPress={() => navigation.navigate('Comprar')} title=" Entrar" type="outline" color='#FBEEE6' style={styles.textWithShadow}
@@ -127,58 +132,67 @@ function Register({ navigation }) {
   return (
     <View style={{ flex: 1, width: '100%', backgroundColor: '#191919'   }}>
       <ImageBackground source={require('./assets/register.png')} style={{height: '75%', width: '100%'}}/>
-        <Text style={[styles.textWithShadow, {flex: 1, fontSize: 15, color: '#FBEEE6', marginTop: -290, paddingBottom: 20}]}><MaterialCommunityIcons name="dog" size={25} color="white" /> Registrar</Text>
+        <Text style={[styles.textWithShadow, {flex: 1, fontSize: 15, color: '#FBEEE6', marginTop: '-110%', paddingBottom: 20, textShadowColor: 'rgba(0, 191,  255, 1)',
+            textShadowOffset: {width: 1, height: 1},
+            textShadowRadius: 20}]}><MaterialCommunityIcons name="dog" size={25} color="white" /> Registrar</Text>
         <View>
         <Input  style={{ flex: 1, fontSize: 30, color: '#FBEEE6'}}/>
           <Icon
             name='user'
             size={24}
-            color='#FBEEE6'>
-          <Text style={styles.textWithShadow}>    Ingrese Nombre:</Text></Icon>
+            color='#FBEEE6'
+            >
+          <Text style={[styles.textWithShadow,{textShadowColor: 'rgba(0, 191,  255, 1)',
+            textShadowOffset: {width: 1, height: 1},
+            textShadowRadius: 14}]}>    Ingrese Nombre:</Text></Icon>
           <Input  type='name' style={{
                   flex: 1,
                   color: 'black',
                   backgroundColor: 'white',
-                  borderColor: 'deepskyblue',
-                  borderWidth: 3,
+                  borderColor: 'rgba(0, 191,  255, 0.25)',
+                  borderWidth: 7,
                   margin: 5,
                   borderRadius: 10,
                   padding: 15,
-                  fontSize: 10
+                  fontSize: 14
           }}/>
           <Input  style={{ flex: 1, fontSize: 30, color: '#FBEEE6'}}/>
           <Icon
             name='envelope-o'
             size={24}
             color='#FBEEE6'>
-          <Text style={styles.textWithShadow}>    Ingrese e-mail:</Text></Icon>
+          <Text style={[styles.textWithShadow,{textShadowColor: 'rgba(0, 191,  255, 1)',
+            textShadowOffset: {width: 1, height: 1},
+            textShadowRadius: 14}]}>    Ingrese e-mail:</Text></Icon>
           <Input  autoCompleteType='email' style={{
                   flex: 1,
                   color: 'black',
                   backgroundColor: 'white',
-                  borderColor: 'deepskyblue',
-                  borderWidth: 3,
+                  borderColor: 'rgba(0, 191,  255, 0.25)',
+                  borderWidth: 7,
                   margin: 5,
                   borderRadius: 10,
                   padding: 15,
-                  fontSize: 10
+                  fontSize: 14
           }}/>
           <Icon
             name='unlock'
             size={24}
             color='#FBEEE6'>
-          <Text style={styles.textWithShadow}>    Ingrese Password:</Text></Icon>
+          <Text style={[styles.textWithShadow,{textShadowColor: 'rgba(0, 191,  255, 1)',
+            textShadowOffset: {width: 1, height: 1},
+            textShadowRadius: 14}]}>    Ingrese Password:</Text></Icon>
           <Input secureTextEntry style={{
                   flex: 1,
                   color: 'black',
                   backgroundColor: 'white',
-                  borderColor: 'deepskyblue',
-                  borderWidth: 3,
+                  borderColor: 'rgba(0, 191,  255, 0.25)',
+                  borderWidth: 7,
                   margin: 5,
                   borderRadius: 10,
                   margin: 5,
                   padding: 15,
-                  fontSize: 10
+                  fontSize: 14
           }}/>
           </View>
         <Button onPress={() => navigation.navigate('Loguear')} title=" Registrar" type="outline" color='#FBEEE6' style={styles.textWithShadow}
