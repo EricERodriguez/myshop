@@ -25,9 +25,9 @@ Ejecutar el programa en un entorno local
 <img align="center" src="https://github.com/EricERodriguez//myshop/blob/main/El%20diseño/home.jpg?raw=true" width="50%" height=""  style="max-width-50%;">
 
 <h1>Diseño MockUp :</h1>
-<img aling="center" src="https://github.com/EricERodriguez/myshop/blob/main/El%20diseño/mockup.jpg?raw=true" width="70%" height=""  style="max-width-70%;">
+<img aling="center" src="https://github.com/EricERodriguez/myshop/blob/main/El%20diseño/mockup.jpeg?raw=true" width="70%" height=""  style="max-width-70%;">
 
-<img aling="center" src="https://github.com/EricERodriguez/myshop/blob/main/El%20diseño/mockup.jpg?raw=true" width="70%" height=""  style="max-width-70%;">
+<img aling="center" src="https://github.com/EricERodriguez/myshop/blob/main/El%20diseño/mockup2.jpeg?raw=true" width="70%" height=""  style="max-width-70%;">
 
 <h1>Diseño Edicion de imagenes :</h1>
 <img aling="center" src="https://github.com/EricERodriguez/myshop/blob/main/El%20diseño/prueba%20de%20diseno.png?raw=true" width="70%" height=""  style="max-width-70%;">
