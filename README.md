@@ -37,16 +37,16 @@ Ejecutar el programa en un entorno local
 <br>
 <h1>Diseño final :</h1>
 
-<img aling="center" src="https://github.com/EricERodriguez/myshop/blob/main/El%20diseño/app%20home.jpeg?raw=true" width="70%" height=""  style="max-width-70%;">
+<img aling="center" src="https://github.com/EricERodriguez/myshop/blob/main/El%20diseño/app%20home.jpeg?raw=true" width="70%" height=""  style="max-width-50%;">
 
-<img aling="center" src="https://github.com/EricERodriguez/myshop/blob/main/El%20diseño/app%20registro.jpeg?raw=true" width="70%" height=""  style="max-width-70%;">
+<img aling="center" src="https://github.com/EricERodriguez/myshop/blob/main/El%20diseño/app%20registro.jpeg?raw=true" width="70%" height=""  style="max-width-50%;">
 
-<img aling="center" src="https://github.com/EricERodriguez/myshop/blob/main/El%20diseño/app%20login.jpeg?raw=true" width="70%" height=""  style="max-width-70%;">
+<img aling="center" src="https://github.com/EricERodriguez/myshop/blob/main/El%20diseño/app%20login.jpeg?raw=true" width="70%" height=""  style="max-width-50%;">
 
-<img aling="center" src="https://github.com/EricERodriguez/myshop/blob/main/El%20diseño/app%20carro%20de%20compra%20sin%20seleccion.jpeg?raw=true" width="70%" height=""  style="max-width-70%;">
+<img aling="center" src="https://github.com/EricERodriguez/myshop/blob/main/El%20diseño/app%20carro%20de%20compra%20sin%20seleccion.jpeg?raw=true" width="70%" height=""  style="max-width-50%;">
 
-<img aling="center" src="https://github.com/EricERodriguez/myshop/blob/main/El%20diseño/app%20carro%20de%20compra%20con%20seleccion.jpeg?raw=true" width="70%" height=""  style="max-width-70%;">
+<img aling="center" src="https://github.com/EricERodriguez/myshop/blob/main/El%20diseño/app%20carro%20de%20compra%20con%20seleccion.jpeg?raw=true" width="70%" height=""  style="max-width-50%;">
 
-<img aling="center" src="https://github.com/EricERodriguez/myshop/blob/main/El%20diseño/modal%20compra.jpeg?raw=true" width="70%" height=""  style="max-width-70%;">
+<img aling="center" src="https://github.com/EricERodriguez/myshop/blob/main/El%20diseño/modal%20compra.jpeg?raw=true" width="70%" height=""  style="max-width-50%;">
 
-<img aling="center" src="https://github.com/EricERodriguez/myshop/blob/main/El%20diseño/modal%20enviado.jpeg?raw=true" width="70%" height=""  style="max-width-70%;">
+<img aling="center" src="https://github.com/EricERodriguez/myshop/blob/main/El%20diseño/modal%20enviado.jpeg?raw=true" width="70%" height=""  style="max-width-50%;">
