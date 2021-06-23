@@ -12,9 +12,9 @@ export default class Cart extends React.Component {
 			cartItemsIsLoading: false,
 			cartItems: [
 				/* Imagenes sacadas de waltmart */
-				{itemId: "501436323", name: "Sabrositos", thumbnailImage: "https://walmartar.vteximg.com.br/arquivos/ids/837858-1000-1000/Alimento-Para-Perro-Mix-CarnePollo-Y-Cerdo-Sabrositos-8-Kg---1kg-1-168268.jpg", info: "8 Kg + 1kg", qty: 1, salePrice: "833", checked: 0},
+				{itemId: "501436323", name: "Sabrositos", thumbnailImage: "https://walmartar.vteximg.com.br/arquivos/ids/837858-1000-1000/Alimento-Para-Perro-Mix-CarnePollo-Y-Cerdo-Sabrositos-8-Kg---1kg-1-168268.jpg", info: "8 Kg", qty: 1, salePrice: "833", checked: 0},
 
-				{itemId: "35031861", name: "Pedigree", thumbnailImage: "https://walmartar.vteximg.com.br/arquivos/ids/877754-1000-1000/Alimento-Seco-Para-Perro-Verdura-Y-Pollo-Adulto-Rp-Pedigree-3kg-1-269251.jpg", qty: 1, info: "3 Kg", salePrice: "731", checked: 0},
+				{itemId: "35031861", name: "Pedigree", thumbnailImage: "https://walmartar.vteximg.com.br/arquivos/ids/877754-1000-1000/Alimento-Seco-Para-Perro-Verdura-Y-Pollo-Adulto-Rp-Pedigree-3kg-1-269251.jpg", qty: 1, info: "6 Kg", salePrice: "731", checked: 0},
 
 				{itemId: "801099131", name: "Champ Mix Carnes", thumbnailImage: "https://walmartar.vteximg.com.br/arquivos/ids/877793-1000-1000/Alimento-Champ-Mix-Carnes-15kg-1-475370.jpg", qty: 1, info: "15 Kg", salePrice: "1736", checked: 0},
 
@@ -97,7 +97,11 @@ export default class Cart extends React.Component {
 		return 0;
 	}
 
-
+	listaPulsada = (index) => {
+		let updatedCart = this.state.cartItems; /* clona el primero */
+					updatedCart.splice(index, 3); /* remueve item*/
+					this.setState(updatedCart); /* actualiza el state */
+	}
 
 	render() {
 		const styles = StyleSheet.create({
@@ -109,11 +113,29 @@ export default class Cart extends React.Component {
 		return (
 			<View style={{flex: 1, backgroundColor: '#191919',marginTop: 20 }}>
 				<View style={{flexDirection: 'row', backgroundColor: '#FBEEE6', marginBottom: 5}}>
-					<View style={[styles.centerElement, {width: 90, height: 60}]}>
+					<View style={[styles.centerElement, {width: 60, height: 60}]}>
 						<MaterialCommunityIcons name="dog" size={25} color="#000" />
 					</View>
 					<View style={[styles.centerElement, {height: 60}]}>
 						<Text style={{fontSize: 18, color: '#000'}}>PetShop</Text>
+
+						<View style={{flexDirection: 'row', backgroundColor: '#FBEEE6', marginBottom: 2}}>
+							<TouchableOpacity style={[styles.centerElement, {backgroundColor: '#2089dc', width: 100, height: 25, borderRadius: 5}]} onPress={() => this.listaPulsada(0)}>
+								<Text style={{color: 'black'}} >Mas de 10kg</Text>
+
+						</TouchableOpacity>
+						<TouchableOpacity style={[styles.centerElement, {backgroundColor: '#2089dc', width: 100, height: 25, borderRadius: 5}]} onPress={() => this.listaPulsada(2,3,4)}>
+								<Text style={{color: 'black'}} >Menos de 10kg</Text>
+
+						</TouchableOpacity>
+						<TouchableOpacity style={[styles.centerElement, {backgroundColor: '#2089dc', width: 100, height: 25, borderRadius: 5}]} onPress={() => this.listaPulsada(6)}>
+								<Text style={{color: 'black'}} >mas de 30kg</Text>
+
+						</TouchableOpacity>
+						</View>
+
+
+
 					</View>
 				</View>
 
